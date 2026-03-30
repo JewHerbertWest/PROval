@@ -42,4 +42,4 @@
 ![screenshot of sample](офс.png)
 
 ## Высокоуровневая архитектура
-![screenshot of sample](ВУ.jpg)
+![screenshot of sample](ву2.png)
