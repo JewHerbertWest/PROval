@@ -39,7 +39,7 @@
 ![screenshot of sample](контекст.png)
 
 ## Основной сценарии
-![screenshot of sample](ОФС.png)
+![screenshot of sample](ОФС1.png)
 
 ## Высокоуровневая архитектура
 ![screenshot of sample](ву2.png)
