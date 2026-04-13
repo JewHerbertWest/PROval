@@ -149,52 +149,52 @@
 | НС-17 | Экран оператора завис в аварийный момент, и человек не смог вовремя вмешаться в работу системы. |
 
 ## Негативный сценарий - НС-1:
-![screenshot of sample](1НС.png)
+![screenshot of sample](images/1НС.png)
 
 ## Негативный сценарий - НС-2:
-![screenshot of sample](2НС.png)
+![screenshot of sample](images/2НС.png)
 
 ## Негативный сценарий - НС-3:
-![screenshot of sample](3НС.png)
+![screenshot of sample](images/3НС.png)
 
 ## Негативный сценарий - НС-4:
-![screenshot of sample](4НС.png)
+![screenshot of sample](images/4НС.png)
 
 ## Негативный сценарий - НС-5:
-![screenshot of sample](5НС.png)
+![screenshot of sample](images/5НС.png)
 
 ## Негативный сценарий - НС-6:
-![screenshot of sample](6НС.png)
+![screenshot of sample](images/6НС.png)
 
 ## Негативный сценарий - НС-7:
-![screenshot of sample](7НС.png)
+![screenshot of sample](images/7НС.png)
 
 ## Негативный сценарий - НС-8:
-![screenshot of sample](8НС.png)
+![screenshot of sample](images/8НС.png)
 
 ## Негативный сценарий - НС-9:
-![screenshot of sample](9НС.png)
+![screenshot of sample](images/9НС.png)
 
 ## Негативный сценарий - НС-10:
-![screenshot of sample](10НС.png)
+![screenshot of sample](images/10НС.png)
 
 ## Негативный сценарий - НС-11:
-![screenshot of sample](11НС.png)
+![screenshot of sample](images/11НС.png)
 
 ## Негативный сценарий - НС-12:
-![screenshot of sample](12НС.png)
+![screenshot of sample](images/12НС.png)
 
 ## Негативный сценарий - НС-13:
-![screenshot of sample](13НС.png)
+![screenshot of sample](images/13НС.png)
 
 ## Негативный сценарий - НС-14:
-![screenshot of sample](14НС.png)
+![screenshot of sample](images/14НС.png)
 
 ## Негативный сценарий - НС-15:
-![screenshot of sample](15НС.png)
+![screenshot of sample](images/15НС.png)
 
 ## Негативный сценарий - НС-16:
-![screenshot of sample](16НС.png)
+![screenshot of sample](images/16НС.png)
 
 ## Негативный сценарий - НС-17:
-![screenshot of sample](17НС.png)
+![screenshot of sample](images/17НС.png)
