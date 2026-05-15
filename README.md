@@ -136,61 +136,61 @@
 ## Диаграммы негативных сценариев
 
 ### НС-1. Интерфейс связи с Землёй изменяет команду управления шлюзом
-![screenshot of sample](images/1НС.png)
+![screenshot of sample](images/НС-1.jpg)
 
 ### НС-2. Интерфейс связи с кораблями передаёт поддельный запрос на стыковку
-![screenshot of sample](images/2НС.png)
+![screenshot of sample](images/НС-2.jpg)
 
 ### НС-3. Центральная система управления отправляет команду открытия без проверки давления
-![screenshot of sample](images/3НС.png)
+![screenshot of sample](images/НС-3.jpg)
 
 ### НС-4. Сервис управления шлюзами открывает внутреннюю и внешнюю створку одновременно
-![screenshot of sample](images/4НС.png)
+![screenshot of sample](images/НС-4.jpg)
 
 ### НС-5. Сервис управления доступом выдаёт доступ без полномочий
-![screenshot of sample](images/5НС.png)
+![screenshot of sample](images/НС-5.jpg)
 
 ### НС-6. Сервис контроля отсеков передаёт ложные данные
-![screenshot of sample](images/6НС.png)
+![screenshot of sample](images/НС-6.jpg)
 
 ### НС-7. Сервис стыковки подтверждает неисправный узел
-![screenshot of sample](images/7НС.png)
+![screenshot of sample](images/НС-7.jpg)
 
 ### НС-8. Центральная система управления подменила команду безопасного закрытия шлюза на команду открытия.
-![screenshot of sample](images/НС8.jpg)
+![screenshot of sample](images/НС-8.jpg)
 
 ### НС-9. База данных содержит ложный статус шлюза
-![screenshot of sample](images/9НС.png)
+![screenshot of sample](images/НС-9.jpg)
 
 ### НС-10. Сервис журналирования не сохраняет запись инцидента
-![screenshot of sample](images/10НС.png)
+![screenshot of sample](images/НС-10.jpg)
 
 ### НС-11. Сервис мониторинга не сообщает об отказе питания шлюзового контура
-![screenshot of sample](images/11НС.png)
+![screenshot of sample](images/НС-11.jpg)
 
 ### НС-12. Локальный операторский терминал отправляет несанкционированную команду
-![screenshot of sample](images/12НС.png)
+![screenshot of sample](images/НС-12.jpg)
 
 ### НС-13. Аварийный модуль не переводит систему в безопасный режим
-![screenshot of sample](images/13.png)
+![screenshot of sample](images/НС-13.jpg)
 
 ### НС-14. При пожаре блокируется доступ экипажа к спасательным капсулам
-![screenshot of sample](images/14.png)
+![screenshot of sample](images/НС-14.jpg)
 
 ### НС-15. Интерфейс связи с Землёй повторно отправляет устаревшую команду
-![screenshot of sample](images/15.png)
+![screenshot of sample](images/НС-15.jpg)
 
 ### НС-16. Интерфейс связи с кораблями искажает телеметрию корабля
-![screenshot of sample](images/16.png)
+![screenshot of sample](images/НС-16.jpg)
 
 ### НС-17. Центральная система отправляет взаимоисключающие команды
-![screenshot of sample](images/17.png)
+![screenshot of sample](images/НС-17.jpg)
 
 ### НС-18. Центральная система управления задержала доставку аварийной команды закрытия шлюза до момента разгерметизации.
-![screenshot of sample](images/НС18.jpg)
+![screenshot of sample](images/НС-18.jpg)
 
 ### НС-19. База данных потеряла записи о правах доступа
-![screenshot of sample](images/19.png)
+![screenshot of sample](images/НС-19.jpg)
 
 ### НС-20. Сервис мониторинга формирует ложный сигнал тревоги
-![screenshot of sample](images/20.png)
+![screenshot of sample](images/НС-20.jpg)
