@@ -264,7 +264,14 @@
 
 
 ## Диаграмма последовательности
-![screenshot of sample](ДП.svg)
+![screenshot of sample](diagram/дп1.png)
+![screenshot of sample](diagram/дп2.png)
+![screenshot of sample](diagram/дп3.png)
+![screenshot of sample](diagram/дп4.png)
+![screenshot of sample](diagram/дп5.png)
+![screenshot of sample](diagram/дп6.png)
+![screenshot of sample](diagram/дп7.png)
+![screenshot of sample](diagram/дп8.png)
 
 ## Доверенные компоненты на архитектуре
 ![screenshot of sample](па(д).png)
