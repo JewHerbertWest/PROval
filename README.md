@@ -264,14 +264,9 @@
 
 
 ## Диаграмма последовательности
-![screenshot of sample](diagram/дп1.png)
-![screenshot of sample](diagram/дп2.png)
-![screenshot of sample](diagram/дп3.png)
-![screenshot of sample](diagram/дп4.png)
-![screenshot of sample](diagram/дп5.png)
-![screenshot of sample](diagram/дп6.png)
-![screenshot of sample](diagram/дп7.png)
-![screenshot of sample](diagram/дп8.png)
+![screenshot of sample](diagram/дпп.png)
+![screenshot of sample](diagram/дпп2.png)
+
 
 ## Доверенные компоненты на архитектуре
 ![screenshot of sample](ПАсложности.png)
