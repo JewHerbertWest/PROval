@@ -255,12 +255,12 @@
 
 
 ## Диаграмма последовательности
-![screenshot of sample](diagram/.png)
-![screenshot of sample](diagram/.png)
+![screenshot of sample](ДП1.svg)
+
 
 
 ## Доверенные компоненты на архитектуре
-![screenshot of sample](пасложности9.png)
+![screenshot of sample](пасложности10.png)
 
 # Таблица доверенности компонентов
 
