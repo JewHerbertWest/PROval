@@ -413,4 +413,126 @@
 | НС-16             | Тест негативного сценария 16. Центральная система управления скомпрометирована и формирует конфликтующие команды, но так как введён монитор безопасности команд, взаимоисключающие команды не исполняются одновременно. ЦБ не нарушаются.                 |
 | НС-17             | Тест негативного сценария 17. Центральная система управления скомпрометирована и задерживает аварийную команду, но так как введён МАРЧС, аварийное реагирование запускается без ожидания ЦСУ. Шлюз закрывается, ЦБ не нарушаются.                         |
 
+| Компонент | Соответствие |
+|---|---|
+| 1. Интерфейс связи с Землёй | earth-interface |
+| 2. Валидатор команд | command-validator |
+| 3. Интерфейс связи с кораблями | ship-interface |
+| 4. Подтверждение стыковки | docking-confirmation |
+| 5. Центральная система управления | central-control |
+| 6. Контроль показателей | metrics-control |
+| 7. Сервис управления шлюзами | airlock-control-service |
+| 8. Контроль шлюзов | airlock-control |
+| 9. Подсистема контроля доступа | access-control-subsystem |
+| 10. Система аутентификации | authentication-system |
+| 11. Сервис контроля отсеков | compartment-control-service |
+| 12. Подсистема стыковки кораблей | docking-subsystem |
+| 13. Контроль стыковочного узла | docking-node-control |
+| 14. Политики безопасности | security-policies |
+| 15. База состояний | state-db |
+| 16. Сервис журналирования | logging-service |
+| 17. Криптографический шифратор | crypto-encryptor |
+| 18. Монитор сервисов | service-monitor |
+| 19. Анализатор событий | event-analyzer |
+| 20. Локальный операторский терминал | local-operator-terminal |
+| 21. Проверка авторизации | authorization-check |
+| 22. Аварийный модуль | emergency-module |
+| 23. МАРЧС | emergency-response-module |
+| 24. Монитор безопасности команд | command-security-monitor |
+| 25. Проверка телеметрии корабля | ship-telemetry-check |
+
+### Политики безопасности
+
+```python
+policies = (
+    {"src": "local-operator-terminal", "dst": "command-filter"},
+    {"src": "earth-interface", "dst": "command-filter"},
+    {"src": "ship-interface", "dst": "command-filter"},
+
+    {"src": "command-filter", "dst": "authorization-check"},
+    {"src": "authorization-check", "dst": "command-filter"},
+
+    {"src": "command-filter", "dst": "security-policies"},
+    {"src": "security-policies", "dst": "command-filter"},
+
+    {"src": "command-filter", "dst": "command-validator"},
+    {"src": "command-validator", "dst": "command-filter"},
+
+    {"src": "command-filter", "dst": "command-security-monitor"},
+    {"src": "command-security-monitor", "dst": "command-filter"},
+
+    {"src": "command-filter", "dst": "central-control"},
+
+    {"src": "central-control", "dst": "security-policies"},
+    {"src": "security-policies", "dst": "central-control"},
+
+    {"src": "central-control", "dst": "command-security-monitor"},
+    {"src": "command-security-monitor", "dst": "central-control"},
+
+    {"src": "central-control", "dst": "compartment-control-service"},
+    {"src": "compartment-control-service", "dst": "metrics-control"},
+    {"src": "metrics-control", "dst": "central-control"},
+
+    {"src": "central-control", "dst": "access-control-subsystem"},
+    {"src": "access-control-subsystem", "dst": "authentication-system"},
+    {"src": "authentication-system", "dst": "access-control-subsystem"},
+    {"src": "access-control-subsystem", "dst": "central-control"},
+
+    {"src": "central-control", "dst": "airlock-control-service"},
+    {"src": "airlock-control-service", "dst": "airlock-control"},
+    {"src": "airlock-control", "dst": "airlock-control-service"},
+    {"src": "airlock-control-service", "dst": "central-control"},
+
+    {"src": "central-control", "dst": "docking-subsystem"},
+    {"src": "docking-subsystem", "dst": "ship-telemetry-check"},
+    {"src": "ship-telemetry-check", "dst": "docking-node-control"},
+    {"src": "docking-node-control", "dst": "docking-confirmation"},
+    {"src": "docking-confirmation", "dst": "docking-subsystem"},
+    {"src": "docking-subsystem", "dst": "central-control"},
+
+    {"src": "central-control", "dst": "state-db"},
+    {"src": "state-db", "dst": "central-control"},
+
+    {"src": "airlock-control-service", "dst": "state-db"},
+    {"src": "docking-subsystem", "dst": "state-db"},
+
+    {"src": "command-security-monitor", "dst": "state-db"},
+    {"src": "state-db", "dst": "command-security-monitor"},
+
+    {"src": "central-control", "dst": "logging-service"},
+    {"src": "command-validator", "dst": "logging-service"},
+    {"src": "security-policies", "dst": "logging-service"},
+    {"src": "command-security-monitor", "dst": "logging-service"},
+    {"src": "metrics-control", "dst": "logging-service"},
+    {"src": "airlock-control", "dst": "logging-service"},
+    {"src": "authentication-system", "dst": "logging-service"},
+    {"src": "docking-confirmation", "dst": "logging-service"},
+    {"src": "ship-telemetry-check", "dst": "logging-service"},
+
+    {"src": "logging-service", "dst": "crypto-encryptor"},
+    {"src": "crypto-encryptor", "dst": "state-db"},
+
+    {"src": "service-monitor", "dst": "event-analyzer"},
+    {"src": "event-analyzer", "dst": "emergency-module"},
+    {"src": "event-analyzer", "dst": "emergency-response-module"},
+
+    {"src": "emergency-module", "dst": "emergency-response-module"},
+    {"src": "emergency-response-module", "dst": "airlock-control-service"},
+    {"src": "emergency-response-module", "dst": "access-control-subsystem"},
+    {"src": "emergency-response-module", "dst": "logging-service"},
+)
+
+
+def check_operation(id, details) -> bool:
+    """Проверка возможности совершения обращения."""
+    src: str = details.get("source")
+    dst: str = details.get("deliver_to")
+
+    if not all((src, dst)):
+        return False
+
+    print(f"[info] checking policies for event {id}, {src}->{dst}")
+
+    return {"src": src, "dst": dst} in policies
+```
 
