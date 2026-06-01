@@ -270,8 +270,8 @@
 
 
 ## Диаграмма последовательности
-![screenshot of sample](diagram/дпп.png)
-![screenshot of sample](diagram/дпп2.png)
+![screenshot of sample](diagram/.png)
+![screenshot of sample](diagram/.png)
 
 
 ## Доверенные компоненты на архитектуре
