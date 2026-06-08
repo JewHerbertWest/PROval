@@ -257,7 +257,7 @@
 
 
 ## Диаграмма последовательности
-![screenshot of sample](ДП1.svg)
+![screenshot of sample](ДП2.svg)
 
 
 
