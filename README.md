@@ -262,7 +262,7 @@
 ![screenshot of sample](ДП2.svg)
 
 ## Доверенные компоненты на архитектуре
-![screenshot of sample](ПА10.png)
+![screenshot of sample](ПА11.png)
 
 # Таблица доверенности компонентов
 
